@@ -1,0 +1,96 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=2 cm,
+    bottom=2 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 79, 144}
+\usepackage{fontawesome5}
+\usepackage[
+    pdftitle={Cover Letter - Javier Ocampo - Stripe},
+    pdfauthor={Javier Ocampo},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{parskip}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+\begin{document}
+
+% Header
+\begin{center}
+    \textbf{\fontsize{24pt}{24pt}\selectfont Javier Ocampo}
+
+    \vspace{0.3cm}
+    \normalsize
+    \mbox{\hrefWithoutArrow{mailto:ferroxido@gmail.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}ferroxido@gmail.com}}%
+    \quad
+    \mbox{\hrefWithoutArrow{tel:+353-873837850}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}+353 0873837850}}%
+    \quad
+    \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/ocampojavieralfonso}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}ocampojavieralfonso}}%
+    \quad
+    \mbox{\hrefWithoutArrow{https://github.com/javieroc/}{\color{black}{\footnotesize\faGithub}\hspace*{0.13cm}github/javieroc}}%
+    \quad
+    \mbox{\color{black}{\footnotesize\faMapMarker*}\hspace*{0.13cm}Dublin, Ireland}%
+\end{center}
+
+\vspace{0.3cm}
+
+\noindent April 12, 2026
+
+\vspace{0.3cm}
+
+\noindent Stripe Hiring Team \\
+\noindent Dublin, Ireland
+
+\vspace{0.3cm}
+
+\noindent Dear Stripe Hiring Team,
+
+I am writing to express my strong interest in the \textbf{Full Stack Engineer, Collaboration} role at Stripe. As a Senior Full-Stack Engineer based in Dublin with over 10 years of experience building scalable web applications, and with a particular focus in recent years on AI-powered tooling, I am excited by the opportunity to join a team that acts as a force multiplier for Stripe's engineering organisation.
+
+What drew me immediately to this role is the team's mission: building GenAI-powered experiences that help Stripe employees be more productive. This is a problem space I am genuinely passionate about. I recently built \textbf{Kitchen Buddy}, an AI-powered application featuring a conversational interface backed by a Python service that exposes tools via the \textbf{MCP (Model Context Protocol)}, with multi-provider LLM support through LiteLLM (Gemini, OpenAI, and Anthropic). This hands-on experience designing LLM-powered systems — including prompt engineering, tool-calling patterns, and multi-modal interactions — maps directly to the kind of work your Collaboration team is pursuing.
+
+On the full-stack side, my experience aligns closely with what you are looking for. At \textbf{Cyberfox}, I architected a multi-product SaaS platform from the ground up using \textbf{TypeScript, React, and NestJS}, optimising backend performance for thousands of concurrent requests and leading the full SDLC from discovery to production. I am comfortable owning the entire vertical — from UX and API design through to infrastructure reliability — and have a track record of shipping robust, maintainable systems under real product pressure.
+
+I also bring experience mentoring junior and mid-level engineers, having run peer code reviews and technical workshops at Hexacta. I understand that a small, nimble team like yours depends on strong cross-functional communication and autonomous decision-making, both of which I have honed across distributed, cross-timezone Agile environments.
+
+While my primary expertise is in TypeScript and Node.js, I am a fast learner with experience across multiple languages and runtimes, and I am confident I will get up to speed with Ruby quickly. More broadly, I thrive in environments that demand engineering rigour while experimenting with emerging technologies — which is exactly the balance your team appears to strike.
+
+I would love the opportunity to discuss how my background aligns with your team's goals. Thank you for your time and consideration.
+
+\vspace{0.5cm}
+
+\noindent Sincerely,
+
+\vspace{0.3cm}
+
+\noindent \textbf{Javier Ocampo}
+
+\end{document}
